@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="normalize.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <link rel="icon" href="assets/img/favicon.png">
+  <title>Curriculum vitae</title>
+</head>
+<body>
+  <div class="wrapper">
+
+    <header class="gen-style">
+      <button><img src="assets/img/button-menu.png" alt="Menu icon" title="Menu"></button>
+      <nav class="content-width">
+        <ul class="menu-list unvisible">
+          <li class="menu-list__item"> <a href="#contacts">Contacts</a> </li>
+          <li class="menu-list__item"> <a href="#summary">Summary</a> </li>
+          <li class="menu-list__item"> <a href="#skills">Skills</a> </li>
+          <li class="menu-list__item"> <a href="#code">Code</a> </li>
+          <li class="menu-list__item"> <a href="#courses">Courses</a> </li>
+          <li class="menu-list__item"> <a href="#projects">Projects</a> </li>
+          <li class="menu-list__item"> <a href="#education">Education</a> </li>
+          <li class="menu-list__item"> <a href="#english">English</a> </li>
+        </ul>
+      </nav>
+    </header>
+
+
+    <main>
+      <div class="content-width">
+
+        <div class="info">
+          <img class="info__photo" src="assets/img/photo.jpg" alt="my-photo" title="it's me">
+          <div class="info__name"> 
+            <h1>YURY BUTSKEVICH</h1>
+            <h2>JUNIOR FRONT-END DEVELOPER</h2>
+          </div>
+        </div>
+
+        <div class="about">
+          
+          <div class="about__description" draggable="true" id="contacts" title="you can click and drag the item">
+            <div>
+              <h2>CONTACTS</h2>
+              <img class="about__description_move" src="assets/img/icon-move.png" alt="icon-move" title="move block" draggable="false">
+            </div>
+            <ul class="description__contact-list">
+              <li><span class="about__description_ico"><i class="icon-location2"></i></span>Grodno, Belarus</li>
+              <li><span class="about__description_ico"><i class="icon-envelop"></i></span>Email: <span>bxyura@gmail.com</span></li>
+              <li><span class="about__description_ico"><i class="icon-github"></i></span>Github: <span>yourunb</span></li>
+              <li><span class="about__description_ico"><i class="icon-flickr4"></i></span>Discord: <span>yourunb</span></li>
+            </ul>
+          </div>
+
+          <div class="about__description" draggable="true" id="summary" title="you can click and drag the item">
+            <div>
+              <h2>SUMMARY</h2>
+              <img class="about__description_move" src="assets/img/icon-move.png" alt="icon-move" title="move block" draggable="false">
+            </div>
+            <p>A novice developer. I love programming. I like front-end development because the result is immediately visible, and you can also apply a creative component. I also make simple games in JavaScript. P.S. the main thing is not to stop and not give up writing more and more code (the right idea comes through labor).</p>
+          </div>
+
+          <div class="about__description" draggable="true" id="skills" title="you can click and drag the item">
+            <div>
+              <h2>SKILLS</h2>
+              <img class="about__description_move" src="assets/img/icon-move.png" alt="icon-move" title="move block" draggable="false">
+            </div>
+            <ul class="about__description_list">
+              <li>Web-development: <span>HTML5, CSS3, JavaScript</span></li>
+              <li>Frameworks and libraries: <span>JQuery</span></li>
+              <li>Version control: <span>Github</span></li>
+              <li>Graphics: <span>Figma, Photoshop</span></li>
+            </ul>
+          </div>
+
+          <div class="about__description" draggable="true" id="code" title="you can click and drag the item">
+            <div>
+              <h2>CODE</h2>
+              <img class="about__description_move" src="assets/img/icon-move.png" alt="icon-move" title="move block" draggable="false">
+            </div>
+            <pre>
+function fact(x) {
+  if (x == 0) return 1;
+  return x * fact(x - 1);
+}
+function run(number) {
+    alert(fact(parseInt(number, 10)));
+}
+            </pre>
+          </div>
+
+          <div class="about__description" draggable="true" id="courses" title="you can click and drag the item">
+            <div>
+              <h2>COURSES</h2>
+              <img class="about__description_move" src="assets/img/icon-move.png" alt="icon-move" title="move block" draggable="false">
+            </div>
+            <ul class="about__description_list">
+              <li>Mr. English: <span>English entry level</span></li>
+              <li>IT Academy: <span>Website development using HTML, CSS and JavaScript</span></li>
+              <li>IT Academy: <span>JavaScript Web application development</span> (in progress)</li>
+              <li>RS School: <span>JavaScript Web application development</span> (in progress)</li>
+            </ul> 
+          </div>
+
+          <div class="about__description" draggable="true" id="projects" title="you can click and drag the item">
+            <div>
+              <h2>PROJECTS</h2>
+              <img class="about__description_move" src="assets/img/icon-move.png" alt="icon-move" title="move block" draggable="false">
+            </div>
+            <ul class="about__description_list">
+              <li><a href="https://codepen.io/BxYura/pen/YzRxaRM" target="_blank" title="open the link">Ping Pong on SVG</a></li>
+              <li><a href="https://codepen.io/BxYura/pen/NWEvYer" target="_blank" title="open the link">Ping Pong on Canvas</a></li>
+              <li><a href="https://codepen.io/BxYura/pen/VwVjvqG" target="_blank" title="open the link">Calendar</a></li>
+              <li><a href="https://codepen.io/BxYura/pen/abRRNee" target="_blank" title="open the link">fizzbuzz</a></li>
+              <li><a href="https://yourunb.github.io/First_project-stretch_ceilings/" target="_blank" title="open the link">Stretch ceilings</a></li>
+            </ul>
+          </div>
+
+          <div class="about__description" draggable="true" id="education" title="you can click and drag the item">
+            <div>
+              <h2>EDUCATION</h2>
+              <img class="about__description_move" src="assets/img/icon-move.png" alt="icon-move" title="move block" draggable="false">
+            </div>
+            <p>College of Business and Law: <span>software development</span></p>
+            <p>Modern Humanities Academy: <span>computer science and engineering</span></p>
+          </div>
+
+          <div class="about__description" draggable="true" id="english" title="you can click and drag the item">
+            <div>
+              <h2>ENGLISH</h2>
+              <img class="about__description_move" src="assets/img/icon-move.png" alt="icon-move" title="move block" draggable="false">
+            </div>
+            <p><span>А2</span> - Pre-intermidiate</p>
+          </div>
+          
+        </div>
+
+      </div>
+    </main>
+  
+  </div>
+
+  <footer class="gen-style">
+    <div class="content-width footer-info unvisible">
+      <a href="https://github.com/yourunb" title="open the link">&copy; 2023 Yury Butskevich (@YourunB)</a>
+      <ul>
+        <li><a href="https://codepen.io/BxYura/pens/public" title="open my codepen" target="_blank"><img src="assets/svg/codepen.svg" alt="codepen"></a></li>
+        <li><a href="https://www.codewars.com/users/YourunB" title="open my codewars" target="_blank"><img src="assets/svg/codewars.svg" alt="codewars"></a></li>
+        <li><a href="https://github.com/YourunB" title="open my github" target="_blank"><img src="assets/svg/github.svg" alt="github"></a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="index.js"></script>
+
+</body>
+</html>

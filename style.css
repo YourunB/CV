@@ -318,21 +318,24 @@ footer {
 }
 
 .certificate__course {
-  cursor: pointer;
+  cursor: help;
+  position: relative;
 }
 
 .certificate__course_image {
-  position: fixed;
-  max-width: 500px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-350%, -50%);
+  position: absolute;
+  z-index: 100;
+  opacity: 0;
+  left: 0;
+  top: 100%;
+  width: 0;
   border-radius: 5px;
   transition: 1s;
 }
 
 .certificate__course:hover .certificate__course_image {
-  transform: translate(-50%, -50%);
+  opacity: 1;
+  width: 100%;
 }
 
 .active {

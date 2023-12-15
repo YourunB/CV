@@ -10,14 +10,14 @@
 
 4.  Какие у вас цели на ближайший год и план достижений цели?
     - выделил год не смотря ни на что для front-end. В течнии года закончил курсы:
-        - 4.1 IT Academy:
+        - IT Academy:
             - React for web application development (score: 10/10)
             - JavaScript Web application development (score: 10/10)
             - Website development using HTML, CSS and JavaScript (score: 10/10)
-        - 4.2 RS School:
+        - RS School:
             - JavaScript/Front-end Pre-School 2023Q2 (score: 1126/1135)
             - JavaScript/Front-end Stage1/Stage2 2023Q4 (in progress)
-       - 4.3 В планах: после окончания Stage2 в RS School идти дальше на Stage 3 Angular и парралельно идти на курс Backend в IT Academy.
+       - В планах: после окончания Stage2 в RS School идти дальше на Stage 3 Angular и парралельно идти на курс Backend в IT Academy.
 
 5. Что будете делать, если после IT Bootcamp вы не сможете найти работу в течение 6 месяцев?
     - буду учиться, браться за любые проекты, делать свои проекты, набивать портфолио. ЗП от работы для меня не главное. Искренне кайфую после решения сложных задач. В первую очередь концентрируюсь на выполнении задач и проектов.

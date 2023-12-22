@@ -44,7 +44,7 @@
 
 @keyframes show-photo {
   from {opacity: 0;}
-  to {opacity: 0.95;}
+  to {opacity: 1;}
 }
 
 @keyframes show-content {
@@ -84,8 +84,9 @@ h2 {
   transition: 1s;
 }
 
-button {
+.btn-menu {
   background: none;
+  transition: 1s;
   opacity: 0.7;
   border: none;
   padding: 0;
@@ -93,22 +94,43 @@ button {
   width: 60px;
   transition: 0.5s;
   display: none;
+  position: relative;
 }
 
-  button:hover,
-  button:focus,
-  button:active {
-    opacity: 1;
-    transform: scale(1.1);
-    cursor: pointer;
-    overflow: hidden;
-    transition: 0.5s;
-  }
-
-button img {
+.btn-menu::before {
+  content: '';
+  position: absolute;
+  top: 16px;
+  left: 0;
   width: 60px;
-  height: 60px;
+  height: 10px;
+  background: white;
+  border-radius: 10px;
+  transition: 1s;
 }
+
+.btn-menu::after {
+  content: '';
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 60px;
+  height: 10px;
+  background: white;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.btn-menu_cliked {}
+.btn-menu_cliked::before {
+  top: 23px;
+  rotate: 45deg;
+}
+.btn-menu_cliked::after {
+  top: 23px;
+  rotate: -45deg;
+}
+
 
 span {
   color: rgb(85, 134, 57);
@@ -142,11 +164,6 @@ header {
   animation: drop-line 3s;
 }
 
-  .gen-style:hover {
-    transform: scale(1.01);
-    transition: 2s;
-  }
-
 .menu-list {
   display: flex;
   justify-content: flex-end;
@@ -166,13 +183,6 @@ header {
   width: 100%;
   height: 100%;
 }
-
-  .menu-list__item a:hover {
-    transform: scale(1.1);
-    color: white;
-    text-shadow: 8px 8px 10px rgba(34, 60, 80, 0.6);
-    transition: 0.5;
-  }
 
 main {
   display: grid;
@@ -198,13 +208,6 @@ footer {
 
 .footer-info a {font-size: 16px;}
 
-  .footer-info a:hover {
-    transform: scale(1.02);
-    color: white;
-    text-shadow: 8px 8px 10px rgba(34, 60, 80, 0.6);
-    transition: 0.5s;
-  }
-
 .footer-info ul {
   margin: 0;
   padding: 0;
@@ -224,14 +227,6 @@ footer {
   animation: show-content 6s;
 }
 
-  .footer-info img:hover {
-    transform: scale(1.1);
-    overflow: hidden;
-    transition: 1s;
-    background: white;
-    box-shadow: 6px 6px 8px 2px rgba(34, 60, 80, 0.4);
-  }
-
 .info {
   display: flex;
   align-items: center;
@@ -241,7 +236,7 @@ footer {
 }
 
 .info__photo {
-  opacity: 0.95;
+  opacity: 1;
   padding: 10px;
   margin: 10px;
   max-width: 250px;
@@ -251,18 +246,12 @@ footer {
   object-position: left;
   border-radius: 20px;
   box-shadow: 6px 6px 8px 2px rgba(34, 60, 80, 0.4);
-  animation: show-photo 8s;
+  animation: show-photo 1s;
 }
 
 .info__name {
   transition: 2s;
 }
-
-  .info__name:hover {
-    transform: scale(1.03);
-    text-shadow: 8px 8px 10px rgba(34, 60, 80, 0.6);
-    transition: 2s;
-  }
 
 .about {
   display: grid;
@@ -288,13 +277,6 @@ footer {
     height: 32px;
   }
 
-  .about__description:hover {transform: scale(1.03);}
-
-  .about__description:hover h2 {
-    text-shadow: 8px 8px 10px rgba(34, 60, 80, 0.6);
-    transition: 2s;
-  }
-
 .about__description h2 {
   color: rgb(85, 134, 57);
   text-align: left;
@@ -312,11 +294,6 @@ footer {
   padding: 20px;
   list-style-type: square;
 }
-
-  .about__description_list li a:hover {
-    color: green;
-    text-shadow: 3px 3px 3px rgba(34, 60, 80, 0.4);
-  }
 
 .about__description_ico {margin-right: 10px;}
 
@@ -341,11 +318,6 @@ footer {
   transition: 1s;
 }
 
-.certificate__course:hover .certificate__course_image {
-  opacity: 1;
-  width: 100%;
-}
-
 .active {
   transform: scale(1.05);
   overflow: hidden;
@@ -365,7 +337,7 @@ footer {
 }
 
 .visible {
-  display: block;
+  transform: translateX(0);
   transition: 1s;
 }
 
@@ -395,7 +367,8 @@ footer {
 @media (max-width:768px) {
 
   header {
-    flex-wrap: wrap
+    flex-wrap: wrap;
+    position: relative;
   }
 
   .info {
@@ -407,7 +380,19 @@ footer {
   }
 
   nav {
-    display: none;
+    transition: 1s;
+    transform: translateX(-200%);
+    position: absolute;
+    z-index: 100;
+    background: gray;
+    border-radius: 20px;
+    padding: 20px;
+    left: 0;
+    top: calc(100% + 20px);
+    box-sizing: border-box;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+    background-blend-mode: multiply,multiply;
+    box-shadow: 4px 4px 4px 4px rgba(34, 60, 80, 0.2);
   }
 
   .menu-list {
@@ -417,15 +402,15 @@ footer {
   }
 
   .menu-list__item {
-    border: lightgray 1px solid;
-    border-radius: 10px;
+    border: lightgray 2px solid;
+    border-radius: 5px;
     padding: 5px;
-    margin: 5px;
+    margin: 5px 0;
     text-align: center;
     box-shadow: 6px 6px 8px 2px rgba(34, 60, 80, 0.4);
   }
 
-  button {
+  .btn-menu {
     display: block;
   }
 }
@@ -439,5 +424,67 @@ footer {
   .footer-info {
     justify-content: center;
     flex-wrap: wrap;
+  }
+}
+
+@media (hover:hover) {
+  .btn-menu:hover,
+  .btn-menu:focus,
+  .btn-menu:active {
+    opacity: 1;
+    transform: scale(1.1);
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+
+  .gen-style:hover {
+    transform: scale(1.01);
+    transition: 2s;
+  }
+
+  .menu-list__item a:hover {
+    transform: scale(1.1);
+    color: white;
+    text-shadow: 8px 8px 10px rgba(34, 60, 80, 0.6);
+    transition: 0.5;
+  }
+
+  .footer-info a:hover {
+    transform: scale(1.02);
+    color: white;
+    text-shadow: 8px 8px 10px rgba(34, 60, 80, 0.6);
+    transition: 0.5s;
+  }
+
+  .footer-info img:hover {
+    transform: scale(1.1);
+    overflow: hidden;
+    transition: 1s;
+    background: white;
+    box-shadow: 6px 6px 8px 2px rgba(34, 60, 80, 0.4);
+  }
+
+  .info__name:hover {
+    transform: scale(1.03);
+    text-shadow: 8px 8px 10px rgba(34, 60, 80, 0.6);
+    transition: 2s;
+  }
+
+  .about__description:hover {transform: scale(1.03);}
+
+  .about__description:hover h2 {
+    text-shadow: 8px 8px 10px rgba(34, 60, 80, 0.6);
+    transition: 2s;
+  }
+
+  .about__description_list li a:hover {
+    color: green;
+    text-shadow: 3px 3px 3px rgba(34, 60, 80, 0.4);
+  }
+
+  .certificate__course:hover .certificate__course_image {
+    opacity: 1;
+    width: 100%;
   }
 }

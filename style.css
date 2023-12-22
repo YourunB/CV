@@ -87,12 +87,10 @@ h2 {
 .btn-menu {
   background: none;
   transition: 1s;
-  opacity: 0.7;
   border: none;
   padding: 0;
   height: 60px;
   width: 60px;
-  transition: 0.5s;
   display: none;
   position: relative;
 }
@@ -428,14 +426,17 @@ footer {
 }
 
 @media (hover:hover) {
-  .btn-menu:hover,
-  .btn-menu:focus,
-  .btn-menu:active {
+  .btn-menu:hover {
     opacity: 1;
     transform: scale(1.1);
     cursor: pointer;
     overflow: hidden;
-    transition: 0.5s;
+    transition: 1s;
+  }
+
+  .btn-menu:active {
+    transition: 0.2s;
+    transform: scale(0.9);
   }
 
   .gen-style:hover {

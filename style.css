@@ -242,7 +242,7 @@ footer {
   width: 100%;
   height: 250px;
   object-fit: cover;
-  object-position: left;
+  object-position: top;
   border-radius: 20px;
   box-shadow: 6px 6px 8px 2px rgba(34, 60, 80, 0.4);
   animation: show-photo 1s;

@@ -282,6 +282,20 @@ footer {
   transition: 2s;
 }
 
+.info__name__speciality {
+  background: linear-gradient(
+    to right,
+    rgb(85, 134, 57) 20%,
+    gray 70%,
+    rgb(255, 200, 0) 80%
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-size: 500% auto;
+  animation: text-shine 5s ease-in-out infinite alternate;
+}
+
 .about {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -546,5 +560,14 @@ footer {
   .certificate__course:hover .certificate__course_image {
     opacity: 1;
     width: 100%;
+  }
+}
+
+@keyframes text-shine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
   }
 }

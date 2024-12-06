@@ -136,8 +136,6 @@ h2 {
   transition: 1s;
 }
 
-.btn-menu_cliked {
-}
 .btn-menu_cliked::before {
   top: 23px;
   rotate: 45deg;
@@ -202,9 +200,13 @@ header {
 
 .menu-list__item {
   transition: 0.5s;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
 }
 
 .menu-list__item a {
+  text-shadow: none;
   display: block;
   width: 100%;
   height: 100%;
@@ -231,10 +233,12 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-transform: uppercase;
 }
 
 .footer-info a {
   font-size: 16px;
+  text-shadow: none;
 }
 
 .footer-info ul {
@@ -438,7 +442,6 @@ footer {
   }
 
   nav {
-    transition: 1s;
     transform: translateX(-200%);
     position: absolute;
     z-index: 100;

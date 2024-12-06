@@ -355,22 +355,6 @@ footer {
   padding-left: 0;
 }
 
-.certificate__course {
-  cursor: help;
-  position: relative;
-}
-
-.certificate__course_image {
-  position: absolute;
-  z-index: 100;
-  opacity: 0;
-  left: 0;
-  top: 100%;
-  width: 0;
-  border-radius: 5px;
-  transition: 1s;
-}
-
 .active {
   transform: scale(1.05);
   overflow: hidden;
@@ -560,9 +544,8 @@ footer {
     text-shadow: 3px 3px 3px rgba(34, 60, 80, 0.4);
   }
 
-  .certificate__course:hover .certificate__course_image {
-    opacity: 1;
-    width: 100%;
+  .certificate .certificate__course:hover a {
+    color: white;
   }
 }
 

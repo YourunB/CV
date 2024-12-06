@@ -136,8 +136,6 @@ h2 {
   transition: 1s;
 }
 
-.btn-menu_cliked {
-}
 .btn-menu_cliked::before {
   top: 23px;
   rotate: 45deg;
@@ -202,9 +200,13 @@ header {
 
 .menu-list__item {
   transition: 0.5s;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
 }
 
 .menu-list__item a {
+  text-shadow: none;
   display: block;
   width: 100%;
   height: 100%;
@@ -231,10 +233,12 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-transform: uppercase;
 }
 
 .footer-info a {
   font-size: 16px;
+  text-shadow: none;
 }
 
 .footer-info ul {
@@ -351,22 +355,6 @@ footer {
   padding-left: 0;
 }
 
-.certificate__course {
-  cursor: help;
-  position: relative;
-}
-
-.certificate__course_image {
-  position: absolute;
-  z-index: 100;
-  opacity: 0;
-  left: 0;
-  top: 100%;
-  width: 0;
-  border-radius: 5px;
-  transition: 1s;
-}
-
 .active {
   transform: scale(1.05);
   overflow: hidden;
@@ -438,7 +426,6 @@ footer {
   }
 
   nav {
-    transition: 1s;
     transform: translateX(-200%);
     position: absolute;
     z-index: 100;
@@ -533,7 +520,7 @@ footer {
     transform: scale(1.1);
     overflow: hidden;
     transition: 1s;
-    background: white;
+    background: rgb(85, 134, 57);
     box-shadow: 6px 6px 8px 2px rgba(34, 60, 80, 0.4);
   }
 
@@ -557,9 +544,8 @@ footer {
     text-shadow: 3px 3px 3px rgba(34, 60, 80, 0.4);
   }
 
-  .certificate__course:hover .certificate__course_image {
-    opacity: 1;
-    width: 100%;
+  .certificate .certificate__course:hover a {
+    color: white;
   }
 }
 

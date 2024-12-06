@@ -536,7 +536,7 @@ footer {
     transform: scale(1.1);
     overflow: hidden;
     transition: 1s;
-    background: white;
+    background: rgb(85, 134, 57);
     box-shadow: 6px 6px 8px 2px rgba(34, 60, 80, 0.4);
   }
 

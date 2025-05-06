@@ -223,10 +223,11 @@ main {
   padding: 10px;
   border-radius: 20px;
   box-shadow: 6px 6px 8px 2px rgba(34, 60, 80, 0.4);
-  background: url("https://github.com/YourunB/CV/blob/CV/assets/img/bckg-lines.jpg?raw=true")
-    no-repeat center;
-  background-size: cover;
+  background-color: #efefef;
+  background-image: url("./assets/img/bckg-lines.jpg");
   background-attachment: fixed;
+  background-size: auto 100%;
+  animation: 150s infinite move-bg linear;
 }
 
 footer {
@@ -415,7 +416,23 @@ footer {
   background-color: rgb(100, 100, 100);
 }
 
+@media (max-width: 1920px) {
+  main {
+    animation: 200s infinite move-bg linear;
+  }
+}
+
+@media (max-width: 1280px) {
+  main {
+    animation: 250s infinite move-bg linear;
+  }
+}
+
 @media (max-width: 768px) {
+  main {
+    animation: 350s infinite move-bg linear;
+  }
+
   header {
     flex-wrap: wrap;
     position: relative;
@@ -559,5 +576,17 @@ footer {
   }
   100% {
     background-position: 100% 50%;
+  }
+}
+
+@keyframes move-bg {
+  0% {
+    background-position: 0;
+  }
+  50% {
+    background-position: 1000%;
+  }
+  100% {
+    background-position: 0;
   }
 }

@@ -78,7 +78,7 @@ body {
 }
 
 .wrapper {
-  min-height: calc(100vh - 170px);
+  min-height: calc(100dvh - 170px);
   height: 100%;
 }
 

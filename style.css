@@ -78,7 +78,7 @@ body {
 }
 
 .wrapper {
-  min-height: calc(100vh - 170px);
+  min-height: calc(100dvh - 170px);
   height: 100%;
 }
 
@@ -217,16 +217,33 @@ nav {
 }
 
 main {
+  position: relative;
   display: grid;
   justify-items: center;
   margin: 20px;
   padding: 10px;
   border-radius: 20px;
   box-shadow: 6px 6px 8px 2px rgba(34, 60, 80, 0.4);
-  background: url("https://github.com/YourunB/CV/blob/CV/assets/img/bckg-lines.jpg?raw=true")
-    no-repeat center;
-  background-size: cover;
+  background-image: url("./assets/img/bckg-lines.png");
   background-attachment: fixed;
+  background-size: auto 100%;
+  animation: 200s infinite move-bg linear;
+}
+
+main::before {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #efefef;
+  background-image: url("./assets/img/bckg-lines.png");
+  background-attachment: fixed;
+  background-size: auto 100%;
+  animation: 200s infinite move-bg-reverse linear;
 }
 
 footer {
@@ -415,8 +432,29 @@ footer {
   background-color: rgb(100, 100, 100);
 }
 
+@media (max-width: 1920px) {
+  main,
+  main::before {
+    animation-duration: 250s;
+  }
+}
+
+@media (max-width: 1280px) {
+  main,
+  main::before {
+    animation-duration: 300s;
+  }
+}
+
 @media (max-width: 768px) {
+  main,
+  main::before {
+    animation-duration: 400s;
+  }
+
   header {
+    position: relative;
+    z-index: 50;
     flex-wrap: wrap;
     position: relative;
   }
@@ -559,5 +597,29 @@ footer {
   }
   100% {
     background-position: 100% 50%;
+  }
+}
+
+@keyframes move-bg {
+  0% {
+    background-position: 0;
+  }
+  50% {
+    background-position: 1000%;
+  }
+  100% {
+    background-position: 0;
+  }
+}
+
+@keyframes move-bg-reverse {
+  0% {
+    background-position: 0;
+  }
+  50% {
+    background-position: -1000%;
+  }
+  100% {
+    background-position: 0;
   }
 }

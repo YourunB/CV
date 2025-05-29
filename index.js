@@ -1,6 +1,7 @@
 const navigation = document.getElementsByTagName("nav")[0];
 const btnMenu = document.getElementById("btn-menu");
 const boxAbout = document.getElementsByClassName("about")[0];
+const footerLink = document.getElementById("footer-link");
 
 for (
   let i = 0;
@@ -67,3 +68,5 @@ navigation.addEventListener("click", (event) => {
     checkBtnMenuCondition();
   }
 });
+
+footerLink.innerHTML = `&copy; 2023-${new Date().getFullYear()} Yury Butskevich`

@@ -1,7 +1,7 @@
 {
   "scripts": {
     "start": "npm run lite",
-    "lite": "lite-server"
+    "dev": "lite-server"
   },
   "devDependencies": {
     "eslint": "^8.56.0",

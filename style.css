@@ -367,6 +367,11 @@ footer {
   list-style-type: square;
 }
 
+.about__sublist {
+  list-style-type: none;
+  padding: 0 0 20px 0;
+}
+
 .about__description_ico {
   margin-right: 10px;
 }
@@ -588,6 +593,10 @@ footer {
 
   .certificate .certificate__course:hover a {
     color: white;
+  }
+
+  .certificate__course_last {
+    margin-bottom: 20px;
   }
 }
 
